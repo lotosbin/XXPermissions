@@ -1,11 +1,12 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 33
+    namespace "com.hjq.permissions.demo"
 
     defaultConfig {
         applicationId "com.hjq.permissions.demo"
-        minSdkVersion 16
         targetSdkVersion 33
         versionCode 1802
         versionName "18.2"
@@ -42,12 +43,6 @@ android {
         }
     }
 
-    applicationVariants.all { variant ->
-        // apk 输出文件名配置
-        variant.outputs.all { output ->
-            outputFileName = rootProject.getName() + '.apk'
-        }
-    }
 }
 
 dependencies {
